@@ -1,0 +1,79 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1, p {
+  margin: 0;
+}
+
+:root {
+  --border-radius: 6px;
+  --space-l: 1.5rem;
+  --space-s: 1rem;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: hsl(217, 54%, 11%);
+  padding: 2rem;
+}
+
+.card {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  background-color: hsl(216, 50%, 16%);
+  padding: var(--space-l);
+}
+
+.card__content {
+  padding-bottom: var(--space-s);
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.card__image {
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-l);
+}
+
+.card__title, .card__desc {
+  margin-bottom: var(--space-l);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.author {
+  display: flex;
+  padding-top: var(--space-s);
+  align-items: center;
+}
+
+.author__avatar {
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  margin-right: var(--space-s);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 10px;
+  color: #FFF;
+  font-size: 12px;
+}
+
