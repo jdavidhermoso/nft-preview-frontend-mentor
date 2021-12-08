@@ -15,6 +15,10 @@ h1, p {
   --border-radius: 6px;
   --space-l: 1.5rem;
   --space-s: 1rem;
+  --space-xs: 0.5rem;
+  --title-color: #FFFFFF;
+  --text-color: hsl(215, 51%, 70%);
+  --highlight-color: hsl(178, 100%, 50%);
 }
 
 .content {
@@ -51,9 +55,22 @@ h1, p {
   margin-bottom: var(--space-l);
 }
 
+.card__desc {
+  line-height: 1.8;
+}
+
 .info {
   display: flex;
   justify-content: space-between;
+}
+
+.info__time, .info__pricing {
+  display: flex;
+  align-items: center;
+}
+
+.info__icon {
+  margin-right: var(--space-xs);
 }
 
 .author {
@@ -70,10 +87,58 @@ h1, p {
   margin-right: var(--space-s);
 }
 
+.author__name {
+  font-family: Outfit-regular, serif;
+  color: #FFFFFF;
+}
+
 .attribution {
   position: fixed;
   bottom: 10px;
-  color: #FFF;
+  color: #FFFFFF;
   font-size: 12px;
 }
+
+
+/* FONTS */
+
+@font-face {
+  font-family: Outfit-light;
+  src: url('assets/fonts/Outfit/static/Outfit-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Outfit-regular;
+  src: url('assets/fonts/Outfit/static/Outfit-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Outfit-SemiBold;
+  src: url('assets/fonts/Outfit/static/Outfit-SemiBold.ttf');
+  font-weight: 600;
+}
+
+h1 {
+  font-family: Outfit-SemiBold, serif;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
+
+p {
+  font-family: Outfit-light, serif;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.info__pricing p {
+  font-family: Outfit-SemiBold, serif;
+  color: var(--highlight-color);
+}
+
+.info__time p {
+  font-family: Outfit-regular, serif;
+}
+
 
