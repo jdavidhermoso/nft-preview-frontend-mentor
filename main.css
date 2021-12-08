@@ -13,36 +13,42 @@ h1, p {
 
 :root {
   --border-radius: 6px;
+  --space-xl: 2rem;
   --space-l: 1.2rem;
   --space-s: 1rem;
   --space-xs: 0.5rem;
   --title-color: #FFFFFF;
   --text-color: hsl(215, 51%, 70%);
   --highlight-color: hsl(178, 100%, 50%);
+  --background-color: hsl(217, 54%, 11%);
+  --card-background-color: hsl(216, 50%, 16%);
+  --light-border-color: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
 }
 
 .content {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: hsl(217, 54%, 11%);
-  padding: 2rem;
+  background-color: var(--background-color);
+  padding: var(--space-xl);
 }
 
 .card {
   position: relative;
+  margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius);
-  background-color: hsl(216, 50%, 16%);
+  background-color: var(--card-background-color);
   padding: var(--space-l);
 }
 
 .card__content {
   padding-bottom: var(--space-s);
-  border-bottom: 1px solid hsl(215, 32%, 27%);
+  border-bottom: 1px solid var(--light-border-color);
 }
 
 .card__image {
@@ -82,20 +88,20 @@ h1, p {
 .author__avatar {
   width: 40px;
   height: 40px;
-  border: 1px solid hsl(0, 0%, 100%);
+  border: 1px solid;
   border-radius: 50%;
   margin-right: var(--space-s);
 }
 
 .author__name {
   font-family: Outfit-regular, serif;
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 .attribution {
   position: fixed;
   bottom: 10px;
-  color: #FFFFFF;
+  color: var(--white);
   font-size: 12px;
 }
 
@@ -123,7 +129,7 @@ h1, p {
 h1 {
   font-family: Outfit-SemiBold, serif;
   font-size: 1.5rem;
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 p {
@@ -143,8 +149,14 @@ p {
 
 @media (min-width: 728px) {
   .card {
-    width: 25vw;
+    width: 50vw;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    width: 25vw;
   }
 }
 
